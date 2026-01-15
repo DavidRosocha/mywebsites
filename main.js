@@ -4,6 +4,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
 
 // Loading tracker
 let modelsToLoad = 7; // Total number of models
@@ -54,6 +56,9 @@ controls.update();
 
 // Loaders
 const loader = new GLTFLoader();
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+loader.setDRACOLoader(dracoLoader);
 const textureLoader = new THREE.TextureLoader();
 
 // Raycaster setup
