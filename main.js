@@ -78,7 +78,7 @@ function loadModel(fileName, position, scale, rotation = [0, 0, 0]) {
       model.scale.set(...scale);
       model.rotation.set(...rotation);
 
-      if (fileName === '8_bit_pc.glb') {
+      if (fileName === '8_bit_pc-compressed.glb') {
         computerModel = model;
       }
 
@@ -103,13 +103,13 @@ function loadModel(fileName, position, scale, rotation = [0, 0, 0]) {
 }
 
 // Load Models
-loadModel('drawer_desk.glb', [0.13, 0, 0], [1.3, 1, 1]);
-loadModel('banker_lamp.glb', [0.8, 0.7, -0.25], [1.7, 1.7, 1.7]);
-loadModel('skimmia_japonica.glb', [-0.7, 0.7, -0.3], [0.15, 0.15, 0.15],[0, Math.PI/1.5, 0]);
-loadModel('chair_daisy_plywood.glb', [0, 0, 1.1], [1, 1, 1], [0, Math.PI, 0]);
-loadModel('usb_flash_drive.glb', [-0.9, 0.7, 0.1], [0.02, 0.05, 0.04], [0, Math.PI / 5, 0]);
-loadModel('filing_cabinet_green.glb', [-1, 0, 0.92], [1, 1, 1]);
-loadModel('8_bit_pc.glb', [0, 0.7, -0.1], [3, 2, 1.5]);
+loadModel('drawer_desk-compressed.glb', [0.13, 0, 0], [1.3, 1, 1]);
+loadModel('banker_lamp-compressed.glb', [0.8, 0.7, -0.25], [1.7, 1.7, 1.7]);
+loadModel('skimmia_japonica-compressed.glb', [-0.7, 0.7, -0.3], [0.15, 0.15, 0.15],[0, Math.PI/1.5, 0]);
+loadModel('chair_daisy_plywood-compressed.glb', [0, 0, 1.1], [1, 1, 1], [0, Math.PI, 0]);
+loadModel('usb_flash_drive-compressed.glb', [-0.9, 0.7, 0.1], [0.02, 0.05, 0.04], [0, Math.PI / 5, 0]);
+loadModel('filing_cabinet_green-compressed.glb', [-1, 0, 0.92], [1, 1, 1]);
+loadModel('8_bit_pc-compressed.glb', [0, 0.7, -0.1], [3, 2, 1.5]);
 
 // Lighting
 const pointLight = new THREE.PointLight(0xffffff, 0.7);
